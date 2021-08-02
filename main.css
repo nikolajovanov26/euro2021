@@ -1,0 +1,29 @@
+body{
+    overflow-x: hidden;
+    background-image: url("images/section_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+/* ------------------- NAVBAR --------------- */
+.nav-bg{
+    background-image: url("images/background.jpg");
+    background-size: 100%;
+    padding: 5px 7%;
+}
+.nav-right{
+    flex-flow: row-reverse;
+}
+.nav-white a{
+    color:#ffffffb3!important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.nav-white a:hover{
+    color:white!important;
+}
+
+/* ------------------- X --------------- */
+.pad-bot{
+    padding-top: 50px;
+}
