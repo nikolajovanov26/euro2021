@@ -1,9 +1,16 @@
+/* ------------------- GLOBAL --------------- */
 body{
     overflow-x: hidden;
     background-image: url("images/section_bg.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+}
+.pad-top{
+    padding-top: 80px;
+}
+.whitespace-30{
+    height: 30px;
 }
 /* ------------------- NAVBAR --------------- */
 .nav-bg{
@@ -23,7 +30,63 @@ body{
     color:white!important;
 }
 
-/* ------------------- X --------------- */
-.pad-bot{
-    padding-top: 50px;
+/* ------------------- HOMEPAGE --------------- */
+.div-bottom{
+    align-self: flex-end;
+}
+.progres-text{
+    font-size:32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.pp{
+    border-radius: 15px;
+}
+.cards{
+    position: relative;
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff80;
+    margin-right: 50px;
+    padding: 0px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    font-size:16px;
+    color:black;
+    font-weight: 500;
+    border: solid 3px transparent;
+    transition: all 0.15s ease-in;
+}
+.cards a{
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color:black;
+}
+.cards img{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.cards p{
+    margin-bottom: 20px;
+}
+.cards:hover{
+    background-color: #ffffffa6;
+    border-color: white;
+    text-decoration: none!important;
+}
+.cards a:hover{
+    text-decoration: none!important;
+}
+/* ------------------- BOOTSTRAP OVERRIDE --------------- */
+.progress{
+    height: 1.5rem!important;
 }
