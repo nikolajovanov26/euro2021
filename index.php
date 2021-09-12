@@ -44,6 +44,6 @@
         </div>
     </div>
 </div>
-
+<div class="whitespace-30"></div>
 
 <?php include 'view/footer.php' ?>

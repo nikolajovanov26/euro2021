@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse nav-right" id="navbarNav">
         <ul class="navbar-nav nav-white">
         <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="/euro2021/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="stickers.php">Stickers</a>
+            <a class="nav-link" href="stickers">Stickers</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="album.php">My Album</a>
+            <a class="nav-link" href="album">My Album</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="info.php">Instructions</a>
+            <a class="nav-link" href="info">Instructions</a>
         </li>
         </ul>
     </div>
