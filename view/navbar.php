@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
-    <a class="navbar-brand" href="index.php"><img src="images/logo_white.png" width="120"></a>
+    <a class="navbar-brand" href="/euro2021/"><img src="images/logo_white.png" width="120"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -16,6 +16,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="info">Instructions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login?session=end">Sign Out</a>
         </li>
         </ul>
     </div>

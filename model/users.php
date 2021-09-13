@@ -24,6 +24,15 @@ function check_user($username, $password){
             //echo 'username found!';
             if($user['password'] == $password){
                 echo 'user logged in!';
+                
+                session_start();
+
+                $_SESSION['username'] = $username;
+
+
+
+
+                header("Location: http://localhost/euro2021");
                 return;
             }
             else{
@@ -37,5 +46,10 @@ function check_user($username, $password){
     }
     echo 'user not found!';
 }
+
+function end_session(){
+    unset($_SESSION["username"]);
+}
+
 
 ?>
