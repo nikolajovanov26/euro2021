@@ -19,4 +19,11 @@ function show_process($username){
 
 
 
+function update_process($username, $process){
+
+    $query = 'UPDATE album SET process = "'.$process.'" WHERE "album.username" = "'.$username.'";';
+    //echo $query;
+}
+
+
 ?>

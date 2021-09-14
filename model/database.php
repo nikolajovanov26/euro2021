@@ -1,5 +1,6 @@
 <?php include 'users.php' ?>
 <?php include 'album.php' ?>
+<?php include 'stickers.php' ?>
 
 <?php
 

@@ -7,8 +7,10 @@
 
 if(!empty($progress)){
     $progress = show_process($username);
+    $proc = $progress*100/294;
 } else{
     $progress = 0;
+    $proc = 0;
 }
 
 
@@ -31,10 +33,10 @@ if(!empty($progress)){
             </p>
             <div class="progres-text">
                 Your progress:
-                <span style="color:#2C5364"><?php echo $progress;?></span>/100
+                <span style="color:#2C5364"><?php echo $progress;?></span>/294
             </div>
             <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $progress;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progress;?>%"></div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $proc;?>" aria-valuemin="0" aria-valuemax="294" style="width: <?php echo $proc;?>%"></div>
             </div>
         </div>
         <div class="col">
