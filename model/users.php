@@ -65,5 +65,19 @@ function end_session(){
     unset($_SESSION["username"]);
 }
 
+function get_image($username){
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            if(!empty($user['profile_pic'])){
+                echo $user['profile_pic'];
+            } else {
+                echo 'images/pp.png';
+            }
+            
+        }
+    }
+}
+
 
 ?>

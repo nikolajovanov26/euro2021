@@ -17,9 +17,15 @@
         <li class="nav-item">
             <a class="nav-link" href="info">Instructions</a>
         </li>
+        <?php if(isset($_SESSION['username'])){ ?>
         <li class="nav-item">
             <a class="nav-link" href="login?session=end">Sign Out</a>
         </li>
+        <?php } else { ?>
+        <li class="nav-item">
+            <a class="nav-link" href="login">Sign In</a>
+        </li>
+        <?php } ?>
         </ul>
     </div>
 </nav>

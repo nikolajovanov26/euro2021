@@ -10,14 +10,15 @@ if(!empty($progress)){
 } else{
     $progress = 0;
 }
+
+
 //echo $progress;
-
-
 ?>
+
 <div class="container pad-top">
     <div class="row">
         <div class="col">
-            <img class="pp" src="images/pp.png" width="200" class="pp">
+            <img class="pp" src="images/<?php if (isset($username)){get_image($username);} else echo 'pp.png'; ?>" width="200" class="pp">
         </div>
         <div class="col-6 div-bottom">
             <?php 
