@@ -75,6 +75,54 @@ function end_session(){
     unset($_SESSION["username"]);
 }
 
+function check_pass($username,$password){
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            if ($user['password'] == $password){
+                return true;
+            } else return false;
+        }
+    }
+    return false;
+}
+
+function get_email($username){
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            if(!empty($user['email'])){
+                echo $user['email'];
+            } else {
+                echo 'no-email@mail.com';
+            }
+            
+        }
+    }
+}
+
+function update_email($username,$email){
+    global $db;
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            $query = "UPDATE users SET email='$email' WHERE users.username='$username'";
+            mysqli_query($db,$query);
+        }
+    }
+}
+
+function update_password($username,$password){
+    global $db;
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            $query = "UPDATE users SET password='$password' WHERE users.username='$username'";
+            mysqli_query($db,$query);
+        }
+    }
+}
+
 function get_image($username){
     $users = get_users();
     foreach($users as $user){
