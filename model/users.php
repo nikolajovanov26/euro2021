@@ -72,7 +72,7 @@ function get_image($username){
             if(!empty($user['profile_pic'])){
                 echo $user['profile_pic'];
             } else {
-                echo 'images/pp.png';
+                echo 'pp.png';
             }
             
         }

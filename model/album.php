@@ -9,6 +9,7 @@ function get_albums() {
 }
 
 function show_process($username){
+    global $db;
     $albums = get_albums();
     foreach($albums as $album){
         if ($album['username'] == $username){
@@ -20,9 +21,17 @@ function show_process($username){
 
 
 function update_process($username, $process){
+    global $db;
+    $query = 'UPDATE album SET progress = '.$process.' WHERE album.username = "'.$username.'";';
+    mysqli_query($db,$query);
 
-    $query = 'UPDATE album SET process = "'.$process.'" WHERE "album.username" = "'.$username.'";';
-    //echo $query;
+    /*if(mysqli_query($db,$query) ){
+        echo 'ok';
+    }else{
+        echo mysqli_error($db);
+    }
+    */
+    //echo '<br>'.$query;
 }
 
 

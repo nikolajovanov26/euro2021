@@ -13,6 +13,24 @@ body{
 .whitespace-30{
     height: 30px;
 }
+
+.cta{
+    margin-top: 10px;;
+    background: white;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 2px white;
+    transition: all 0.2s;
+    color:#008290;
+}
+.cta:hover{
+    text-decoration: none;
+    background: transparent;
+    color:white;
+
+}
 /* ------------------- NAVBAR --------------- */
 .nav-bg{
     background-image: url("images/background.jpg");
@@ -113,7 +131,38 @@ body{
     background-position: center center;
 }
 
+/* ------------------- STICKERS --------------- */
 
+.inp-st{
+    border: 1px solid white;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position:relative;   
+    cursor:pointer;
+    font-weight: 600;
+}
+.inp-st [type="checkbox"] {
+    display:none;
+}
+[type="checkbox"] + span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+:checked + span {
+    width: 100%;
+    background:#0f0;  
+    display: inline-flex;
+    align-items: center;
+}
+[type="checkbox"][disabled] + span {
+    width: 100%;
+    background:white;  
+    color:#008290;
+}
 
 /* ------------------- LOGIN --------------- */
 

@@ -5,6 +5,11 @@
     $progress = show_process($username);
 }
 
+$stickers = show_stickers($username);
+$progress = count($stickers);
+update_process($username, $progress);
+
+
 if(!empty($progress)){
     $progress = show_process($username);
     $proc = $progress*100/294;

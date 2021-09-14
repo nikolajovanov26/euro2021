@@ -14,8 +14,8 @@ if(!empty($progress)){
 }
 
 $stickers = show_stickers($username);
-
-update_process($username, 20);
+$progress = count($stickers);
+update_process($username, $progress);
 
 ?>
 
@@ -602,11 +602,11 @@ update_process($username, 20);
             </figure>
             <div class="progres-text">
                 Your progress:
-                <span style="color:#2C5364"><?php echo $progress;?></span>/100
-            </div>
+                <span style="color:#2C5364"><?php echo $progress;?></span>/294
             <div class="progress">
                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <?php echo $proc;?>%" aria-valuenow="<?php echo $proc;?>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
+            <a href="stickers" class="cta">Add Stickers</a>
         </div>
     </div>
 </div>
