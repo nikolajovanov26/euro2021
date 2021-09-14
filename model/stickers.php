@@ -34,6 +34,14 @@ function find_image($num){
     }
 }
 
+function add_sticker($username, $num){
+    global $db;
+    $query = "INSERT INTO stickers(num,album) VALUES ('$num','$username');";
+    mysqli_query($db,$query);
+    
+    //echo '<br>'.$query;
+}
+
 
 
 ?>

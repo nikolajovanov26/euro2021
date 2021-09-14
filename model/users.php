@@ -10,8 +10,10 @@ function get_users() {
 
 function add_user($username, $email, $password) {
     global $db;
-    $query = "INSERT INTO users (`username`, `email`, `password`, `profile_pic`, `album`)
-              VALUES ('$username', '$email', '$password', NULL, NULL);";
+    $query = "INSERT INTO users (`username`, `email`, `password`, `profile_pic`)
+              VALUES ('$username', '$email', '$password', NULL);";
+
+    $query2 = "INSERT INTO album (`username`) VALUES ('$username')";
     
     $users = get_users();
     foreach($users as $user){
@@ -25,8 +27,16 @@ function add_user($username, $email, $password) {
         }
     }
     if(mysqli_query($db, $query)){
+        if(mysqli_query($db,$query2) ){
+            echo 'ok';
+        }else{
+            echo mysqli_error($db);
+        }
+        mysqli_query($db, $query2);
         header("Location: http://localhost/euro2021/register?message=suc");
-    } 
+    } else{
+        echo mysqli_error($db);
+    }
 }
 
 
