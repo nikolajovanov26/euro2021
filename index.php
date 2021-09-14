@@ -1,14 +1,25 @@
 <?php include 'view/header.php' ?>
 <?php include 'view/navbar.php' ?>
+<?php if(isset($_SESSION['username'])){
+    $username = $_SESSION['username'];
+    $progress = show_process($username);
+}
+
+if(!empty($progress)){
+    $progress = show_process($username);
+} else{
+    $progress = 0;
+}
+//echo $progress;
 
 
+?>
 <div class="container pad-top">
     <div class="row">
         <div class="col">
             <img class="pp" src="images/pp.png" width="200" class="pp">
         </div>
         <div class="col-6 div-bottom">
-            
             <?php 
             if(isset($_SESSION['username'])){
                 ?><p class='username'><?php
@@ -19,10 +30,10 @@
             </p>
             <div class="progres-text">
                 Your progress:
-                <span style="color:#2C5364">55</span>/100
+                <span style="color:#2C5364"><?php echo $progress;?></span>/100
             </div>
             <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<?php echo $progress;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progress;?>%"></div>
             </div>
         </div>
         <div class="col">

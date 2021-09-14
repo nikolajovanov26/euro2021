@@ -1,6 +1,9 @@
 <?php include 'view/header.php' ?>
 <?php include 'view/navbar.php' ?>
 
+
+
+
 <div class="container pad-top">
     <div class="row">
         <div class="col-8">

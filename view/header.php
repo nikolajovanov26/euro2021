@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include 'model/database.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,4 +19,3 @@
 
 <body>
 
-<?php include 'model/database.php' ?>

@@ -13,8 +13,10 @@ if ( isset( $_POST['username']) && !empty($_POST['username']) ){
     $error = "PLEASE ENTER USERNAME";
 }
 
-if ($_GET['session']=='end'){
-    end_session();
+if (isset($_GET['session'])){
+    if($_GET['session'] =='end'){
+        end_session();
+    }
 }
 
 ?>

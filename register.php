@@ -48,6 +48,19 @@ if(!empty($username) && !empty($email) && !empty($password)){
         <a class="white-link" href="login">Already have an account? Sign In!</a>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+        <p class='form-info'>
+            <?php
+            if(isset( $_GET['message'])){
+                if($_GET['message'] == 'suc'){
+                    echo 'You have been succesfully registered! <br><a href="login">Log In!</a>';
+                } else if($_GET['message'] == 'err-u'){
+                    echo 'The <u>username</u> you have entered has been taken. Please Try again';
+                } else if($_GET['message'] == 'err-e'){
+                    echo 'The <u>email</u> you have entered has been taken. Please Try again';
+                } 
+            }
+            ?>
+        </p>
     </form>
     </main>
 </div>
