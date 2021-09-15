@@ -42,7 +42,7 @@ function remove_exc($username, $num){
 }
 
 
-function exchange(){
+function start_exchange(){
     global $db;
     $exc=get_exc();
     $usernames=array();
@@ -55,7 +55,6 @@ function exchange(){
     shuffle($usernames);
 
     foreach($usernames as $un){
-        echo '<b>username: '.$un . '</b><br>';
 
         unset($zs);
         unset($ima);
@@ -77,48 +76,72 @@ function exchange(){
         foreach($ost as $o){
             unset($ima_o);
             unset($zs_o);
-            $ima_o = show_stickers($o); //ima
+            $ima_o = show_stickers($o);
             $zs_o = array();
             foreach($exc as $e){
                 if($e['username']==$o){
                     array_push($zs_o,$e['num']);
                 }
             }
-
-            foreach($zs as $s){
-                if(!in_array($s,$ima_o)){
-                    //echo $o .' go nema ' . $s .' <br>';
-                    foreach($zs_o as $s_o){
-                        if(!in_array($s_o,$ima)){
-                            echo '<u>'.$un.'</u> go dobiva '.$s_o;
-                            echo ', <u>'.$o.'</u> go dobiva '.$s.'<br>';
-                            //$s_o=null;
-                            //$s=null;
+            //echo 'aa';
+            for($j=0;$j<count($zs);$j++){
+                $found=0;
+                if(!in_array($zs[$j],$ima_o)){
+                    for($i=0;$i<count($zs_o);$i++){
+                        //echo 'bb';
+                        if(!in_array($zs_o[$i],$ima)){
+                            $id1=find_exc_id($zs[$j],$un);
+                            $id2=find_exc_id($zs_o[$i],$o);
+                            exchange($un,$zs_o[$i],$id1,$o,$zs[$j],$id2);
+                            $zs_o[$i]=null;
+                            $zs[$j]=null;
+                            $zs=array_values(array_filter($zs));
+                            $zs_o=array_values(array_filter($zs_o));
                             break;
                         }
-                        echo 'break; <br>';
-                    }
+                    }                     
                 } 
             }
-
         }
-        
-        
-        //echo ' have: '. $ima[0]. ' duplicate: '.$zs[0] .' other: '.$ost[0]. ' ima: '.$ima_o[0].' za smena: '.$zs_o[0];
-        /*
-        shuffle($st);
-        if(!empty($st)){
-            echo $st[0]. ' ';
-        }
-        */
         echo '<br> ';
-        
     }
+}
 
-    
+function find_exc_id($num,$username){
+    $exc = get_exc();
+    foreach($exc as $e){
+        if($e['num']==$num){
+            if($e['username']){
+                return $e['id'];
+            }
+        }
+    }
 }
 
 
+function exchange($user1,$num1,$id1,$user2,$num2,$id2){
+    
+    global $db;
+    
+    $query = "INSERT INTO stickers(num,album) VALUES ('$num1','$user1');";
+    if(mysqli_query($db,$query) ){
+        echo 'ok';
+    }else{
+        echo mysqli_error($db);
+    }
+    
+    $query = "INSERT INTO stickers(num,album) VALUES ('$num2','$user2');";
+    if(mysqli_query($db,$query) ){
+        echo 'ok';
+    }else{
+        echo mysqli_error($db);
+    }
+    
+    $query = "DELETE FROM exchanges WHERE exchanges.id='$id1';";
+    mysqli_query($db,$query);
+    $query = "DELETE FROM exchanges WHERE exchanges.id='$id2';";
+    mysqli_query($db,$query);
+}
 
 
 
