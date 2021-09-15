@@ -606,7 +606,8 @@ update_process($username, $progress);
             <div class="progress">
                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <?php echo $proc;?>%" aria-valuenow="<?php echo $proc;?>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <a href="stickers" class="cta">Add Stickers</a>
+            <a href="stickers" class="cta">Add Stickers</a><br>
+            <a href="exchange" class="cta">Exchange Stickers</a>
         </div>
     </div>
 </div>

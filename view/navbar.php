@@ -8,6 +8,9 @@
         <li class="nav-item active">
             <a class="nav-link" href="/euro2021/">Home</a>
         </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="profile">Profile</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" href="stickers">Stickers</a>
         </li>
@@ -15,8 +18,12 @@
             <a class="nav-link" href="album">My Album</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="exchange">Exchange</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="info">Instructions</a>
         </li>
+        
         <?php if(isset($_SESSION['username'])){ ?>
         <li class="nav-item">
             <a class="nav-link" href="login?session=end">Sign Out</a>
