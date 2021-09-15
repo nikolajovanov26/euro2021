@@ -40,7 +40,7 @@ function check_s($i){
 }
       
 
-
+exchange();
 
 
 //echo $progress;

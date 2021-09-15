@@ -17,6 +17,8 @@ $stickers = show_stickers($username);
 $progress = count($stickers);
 update_process($username, $progress);
 
+
+
 ?>
 
 
