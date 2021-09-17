@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php include 'model/database.php' ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">

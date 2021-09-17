@@ -148,4 +148,17 @@ function upload_pp($username,$filename){
 }
 
 
+function find_email($username){
+    $users = get_users();
+    foreach($users as $user){
+        if($user['username']==$username){
+            return $user['email'];
+        }
+    }
+
+    
+}
+
+
+
 ?>

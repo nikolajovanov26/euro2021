@@ -5,6 +5,8 @@
     $progress = show_process($username);
 }
 
+
+
 $stickers = show_stickers($username);
 $progress = count($stickers);
 update_process($username, $progress);
@@ -17,9 +19,8 @@ if(!empty($progress)){
     $progress = 0;
     $proc = 0;
 }
-//header('Location: ');
 
-//echo $progress;
+
 ?>
 
 <div class="container pad-top">

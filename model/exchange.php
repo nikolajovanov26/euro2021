@@ -1,5 +1,18 @@
 <?php
 
+
+    use PHPMailer\PHPMailer\PHPMailer; 
+    use PHPMailer\PHPMailer\Exception; 
+
+    require 'PHPMailer/Exception.php'; 
+    require 'PHPMailer/PHPMailer.php'; 
+    require 'PHPMailer/SMTP.php'; 
+
+    $mail = new PHPMailer; 
+
+
+
+
 function get_exc() {
     global $db;
     $query = 'SELECT * FROM exchanges
@@ -92,7 +105,11 @@ function start_exchange(){
                         if(!in_array($zs_o[$i],$ima)){
                             $id1=find_exc_id($zs[$j],$un);
                             $id2=find_exc_id($zs_o[$i],$o);
-                            exchange($un,$zs_o[$i],$id1,$o,$zs[$j],$id2);
+                            $email1=find_email($un);
+                            $email2=find_email($o);
+                            //echo 'Email1: '. $email1 . '<br>';
+                            //echo 'Email2: '. $email2 . '<br>';
+                            exchange($un,$zs_o[$i],$id1,$email1,$o,$zs[$j],$id2,$email2);
                             $zs_o[$i]=null;
                             $zs[$j]=null;
                             $zs=array_values(array_filter($zs));
@@ -119,30 +136,93 @@ function find_exc_id($num,$username){
 }
 
 
-function exchange($user1,$num1,$id1,$user2,$num2,$id2){
+function exchange($user1,$num1,$id1,$email1,$user2,$num2,$id2,$email2){
     
     global $db;
     
     $query = "INSERT INTO stickers(num,album) VALUES ('$num1','$user1');";
-    if(mysqli_query($db,$query) ){
-        echo 'ok';
-    }else{
-        echo mysqli_error($db);
-    }
+    mysqli_query($db,$query);
+    
     
     $query = "INSERT INTO stickers(num,album) VALUES ('$num2','$user2');";
-    if(mysqli_query($db,$query) ){
-        echo 'ok';
-    }else{
-        echo mysqli_error($db);
-    }
+    mysqli_query($db,$query);
     
     $query = "DELETE FROM exchanges WHERE exchanges.id='$id1';";
     mysqli_query($db,$query);
     $query = "DELETE FROM exchanges WHERE exchanges.id='$id2';";
     mysqli_query($db,$query);
-}
 
+
+
+    // first
+    
+
+    global $mail; 
+    
+    $mail->isSMTP();                      // Set mailer to use SMTP 
+    $mail->Host = 'smtp-mail.outlook.com';       // Specify main and backup SMTP servers 
+    $mail->SMTPAuth = true;               // Enable SMTP authentication 
+    $mail->Username = 'nikolajovanov26@outlook.com';   // SMTP username 
+    $mail->Password = 'TestTest123';   // SMTP password 
+    $mail->SMTPSecure = 'STARTTLS';            // Enable TLS encryption, `ssl` also accepted 
+    $mail->Port = 587;                    // TCP port to connect to 
+    
+    // Sender info 
+    $mail->setFrom('nikolajovanov26@outlook.com', 'Euro 2021 Exchange'); 
+    //$mail->addReplyTo('nikolajovanov26@outlook.com', 'QWE'); 
+    
+    // Add a recipient 
+    $mail->addAddress($email1); 
+    
+    //$mail->addCC('cc@example.com'); 
+    //$mail->addBCC('bcc@example.com'); 
+    
+    // Set email format to HTML 
+    $mail->isHTML(true); 
+    
+    // Mail subject 
+    $mail->Subject = 'We found you a matching request'; 
+    
+    // Mail body content 
+    $bodyContent = '<h1>'.$user1.', an excahnge has been made!</h1>'; 
+    $bodyContent .= '<p>You have recieved num: '.$num2.' from '.$user2.' as an exchange for your num: '.$num1.'</p>'; 
+    $mail->Body    = $bodyContent; 
+    
+
+    // Send email 
+    if(!$mail->send()) { 
+        echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo; 
+    } else { 
+        echo 'Message has been sent.'; 
+    } 
+
+
+    //secont
+    
+    $mail->addAddress($email2); 
+    
+    //$mail->addCC('cc@example.com'); 
+    //$mail->addBCC('bcc@example.com'); 
+    
+    // Set email format to HTML 
+    $mail->isHTML(true); 
+    
+    // Mail subject 
+    $mail->Subject = 'We found you a matching request'; 
+    
+    // Mail body content 
+    $bodyContent = '<h1>'.$user2.', an excahnge has been made!</h1>'; 
+    $bodyContent .= '<p>You have recieved num: '.$num1.' from '.$user1.' as an exchange for your num: '.$num2.'</p>'; 
+    $mail->Body    = $bodyContent; 
+    
+
+    // Send email 
+    if(!$mail->send()) { 
+        echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo; 
+    } else { 
+        echo 'Message has been sent.'; 
+    } 
+}
 
 
 
