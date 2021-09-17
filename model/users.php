@@ -10,6 +10,7 @@ function get_users() {
 
 function add_user($username, $email, $password) {
     global $db;
+    $password=sha1($username.$password);
     $query = "INSERT INTO users (`username`, `email`, `password`, `profile_pic`)
               VALUES ('$username', '$email', '$password', NULL);";
 
@@ -41,6 +42,7 @@ function add_user($username, $email, $password) {
 
 
 function check_user($username, $password){
+    $password=sha1($username.$password);
     $users = get_users();
     foreach($users as $user){
 
@@ -76,6 +78,7 @@ function end_session(){
 }
 
 function check_pass($username,$password){
+    $password=sha1($username.$password);
     $users = get_users();
     foreach($users as $user){
         if ($user['username'] == $username){
@@ -113,6 +116,7 @@ function update_email($username,$email){
 }
 
 function update_password($username,$password){
+    $password=sha1($username.$password);
     global $db;
     $users = get_users();
     foreach($users as $user){
