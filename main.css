@@ -31,6 +31,8 @@ body{
     color:white;
 
 }
+
+
 /* ------------------- NAVBAR --------------- */
 .nav-bg{
     background-image: url("images/background.jpg");
@@ -129,6 +131,16 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+/* ------------------- PROFILE --------------- */
+
+.file_upl{
+    margin-left:20px;
+}
+.flex-bot{
+    display: flex;
+    align-items: baseline;
 }
 
 /* ------------------- STICKERS --------------- */

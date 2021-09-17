@@ -137,5 +137,11 @@ function get_image($username){
     }
 }
 
+function upload_pp($username,$filename){
+    global $db;
+    $query = "UPDATE users SET profile_pic='$filename' WHERE users.username='$username'";
+    mysqli_query($db,$query);
+}
+
 
 ?>

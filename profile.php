@@ -19,6 +19,16 @@ if(isset($_POST['submit'])){
                 update_password($username,$password);
                 $message = 'Profile Updated';
             }
+            //FILE UPLOAD
+            $filename = $_FILES["uploadfile"]["name"];
+            $filename = "pp/".$filename;
+            $tempname = $_FILES["uploadfile"]["tmp_name"];    
+            $folder = "images/".$filename;
+            upload_pp($username,$filename);
+            move_uploaded_file($tempname, $folder);
+
+
+
         } else {
             $message = 'Incorrect Password';
         }
@@ -41,9 +51,10 @@ if(isset($_POST['submit'])){
         <br>
     </div>
     <div class="col">
-        <form method="post" action="">
-            <div class="col">
+        <form method="post" action="" enctype="multipart/form-data">
+            <div class="col flex-bot">
                 <img class="pp" src="images/<?php if (isset($username)){get_image($username);} else echo 'pp.png'; ?>" width="200" class="pp">
+                <input type="file"  name="uploadfile"  value="" class="file_upl" />
             </div> <br>
             <input name="username" type="text" class="form-control" value="<?php echo $username; ?>" disabled>
             <label>Username</label> <br>

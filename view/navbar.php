@@ -20,9 +20,6 @@
         <li class="nav-item">
             <a class="nav-link" href="exchange">Exchange</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="info">Instructions</a>
-        </li>
         
         <?php if(isset($_SESSION['username'])){ ?>
         <li class="nav-item">
