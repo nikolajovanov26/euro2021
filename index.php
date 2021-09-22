@@ -5,7 +5,7 @@
     $progress = show_process($username);
 }
 
-
+is_logged($username);
 
 $stickers = show_stickers($username);
 $progress = count($stickers);
@@ -53,16 +53,16 @@ if(!empty($progress)){
 <div class="whitespace-30"></div>
 <div class="container pad-top">
     <div class="row">
-        <div class="col-sm cards">
-            <a href="profile">
-                <img src="images/profile.png" width="200">
-                <p>Profile</p>
-            </a>
-        </div>
-        <div class="col-sm cards">
+    <div class="col-sm cards">
             <a href="stickers">
                 <img src="images/stickers.png" width="200">
                 <p>Stickers</p>
+            </a>
+        </div>
+        <div class="col-sm cards">
+            <a href="exchange">
+                <img src="images/exchange.png" width="200">
+                <p>Exchange</p>
             </a>
         </div>
         <div class="col-sm cards">

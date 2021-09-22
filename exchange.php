@@ -5,6 +5,8 @@
     $progress = show_process($username);
 }
 
+is_logged($username);
+
 unset($st);
 unset($rst);
 $st = array();
@@ -75,6 +77,7 @@ start_exchange();
         <form method="post" action="">
             
             <?php
+            sort($exc);
             foreach($exc as $e){ ?>
                 <label class="inp-st"> 
                     <input type="checkbox" id="rst<?php echo $e;?>" name="rst[]" value="<?php echo $e;?>" > 

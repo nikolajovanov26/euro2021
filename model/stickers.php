@@ -42,5 +42,4 @@ function add_sticker($username, $num){
 }
 
 
-
 ?>

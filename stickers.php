@@ -5,6 +5,8 @@
     $progress = show_process($username);
 }
 
+is_logged($username);
+
 $stickers = show_stickers($username);
 $progress = count($stickers);
 update_process($username, $progress);

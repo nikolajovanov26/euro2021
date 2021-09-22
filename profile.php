@@ -4,6 +4,10 @@
 <?php if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
 }
+
+is_logged($username);
+
+
 $message ='';
 if(isset($_POST['submit'])){
     if(isset($_POST['o_password']) && !empty($_POST['o_password'])){

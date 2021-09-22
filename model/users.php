@@ -159,6 +159,11 @@ function find_email($username){
     
 }
 
+function is_logged($username){
+    if(!$username){
+        header("Location: http://localhost/euro2021/login");
+    }
+}
 
 
 ?>

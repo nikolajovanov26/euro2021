@@ -5,6 +5,8 @@
     $progress = show_process($username);
 }
 
+is_logged($username);
+
 if(!empty($progress)){
     $progress = show_process($username);
     $proc = $progress*100/294;
@@ -609,7 +611,8 @@ update_process($username, $progress);
                 <div class="progress-bar progress-bar-striped" role="progressbar" style="width: <?php echo $proc;?>%" aria-valuenow="<?php echo $proc;?>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <a href="stickers" class="cta">Add Stickers</a><br>
-            <a href="exchange" class="cta">Exchange Stickers</a>
+            <a href="exchange" class="cta">Exchange Stickers</a></br>
+            
         </div>
     </div>
 </div>
