@@ -197,8 +197,11 @@ function exchange($user1,$num1,$id1,$email1,$user2,$num2,$id2,$email2){
     } 
 
 
-    //secont
+    //second
     
+    /*** REMOVE THE FIRST RECIPIENT'S ADDRESS - NOT TESTED *****/
+    $mailer->clearAllRecipients( );
+
     $mail->addAddress($email2); 
     
     //$mail->addCC('cc@example.com'); 
