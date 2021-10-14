@@ -11,6 +11,9 @@ if(isset($_GET['num'])){
 
 is_logged($username);
 
+if(!is_admin($username)){
+    header("Location: http://localhost/euro2021");
+  }
 
 //$message ='';
 
