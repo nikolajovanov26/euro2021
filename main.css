@@ -119,6 +119,7 @@ body{
     display: flex;
 }
 .sticker-row div{
+    position: relative;
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -131,6 +132,30 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.st-num {
+    background-color: white;
+    max-width: 25px;
+    max-height: 25px;
+    padding: 0px!important;
+    margin: 0px!important;
+    line-height: 25px;
+    border-radius: 8px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute!important;
+    top: 0px;
+    left: 0px;
+    color:black;
+    font-weight: 700;
+}
+
+.m_s.admin{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
 }
 
 /* ------------------- PROFILE --------------- */

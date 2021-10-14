@@ -24,14 +24,23 @@ function show_stickers($username){
 function find_image($num){
     $stickers = get_stickers();
     foreach($stickers as $sticker){
-        if ($sticker['num'] == $num){
-            if(isset($sticker['image'])) {
-                return $sticker['image'];
-            } else {
-                return './images/stickers/sticker.jpg';
+        if($sticker['num'] == $num){
+            if ($sticker['album'] == 'admin'){
+                if(isset($sticker['image'])) {
+                    return $sticker['image'];
+                } else {
+                    return 'stickers/sticker.jpg';
+                } 
             } 
-        } 
+        }
     }
+    return 'stickers/sticker.jpg';
+}
+
+function upload_image($num,$filename){
+    global $db;
+    $query = "INSERT INTO stickers(num,album,image) VALUES ('$num','admin','$filename');";
+    mysqli_query($db,$query);
 }
 
 function add_sticker($username, $num){

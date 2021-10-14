@@ -34,7 +34,7 @@ update_process($username, $progress);
             <?php
                 for($i=1;$i<7;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -47,7 +47,7 @@ update_process($username, $progress);
             <?php
                 for($i=7;$i<13;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -58,7 +58,7 @@ update_process($username, $progress);
             <?php
                 for($i=13;$i<19;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -70,7 +70,7 @@ update_process($username, $progress);
             <?php
                 for($i=19;$i<25;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -81,7 +81,7 @@ update_process($username, $progress);
             <?php
                 for($i=25;$i<31;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -93,7 +93,7 @@ update_process($username, $progress);
             <?php
                 for($i=31;$i<37;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -104,7 +104,7 @@ update_process($username, $progress);
             <?php
                 for($i=37;$i<43;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -116,7 +116,7 @@ update_process($username, $progress);
             <?php
                 for($i=43;$i<49;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -127,7 +127,7 @@ update_process($username, $progress);
             <?php
                 for($i=49;$i<55;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -140,7 +140,7 @@ update_process($username, $progress);
             <?php
                 for($i=55;$i<61;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -151,7 +151,7 @@ update_process($username, $progress);
             <?php
                 for($i=61;$i<67;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -163,7 +163,7 @@ update_process($username, $progress);
             <?php
                 for($i=67;$i<73;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -174,7 +174,7 @@ update_process($username, $progress);
             <?php
                 for($i=73;$i<79;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -186,7 +186,7 @@ update_process($username, $progress);
             <?php
                 for($i=79;$i<85;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -197,7 +197,7 @@ update_process($username, $progress);
             <?php
                 for($i=85;$i<91;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -209,7 +209,7 @@ update_process($username, $progress);
             <?php
                 for($i=91;$i<97;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -220,7 +220,7 @@ update_process($username, $progress);
             <?php
                 for($i=97;$i<103;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -233,7 +233,7 @@ update_process($username, $progress);
             <?php
                 for($i=103;$i<109;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -244,7 +244,7 @@ update_process($username, $progress);
             <?php
                 for($i=109;$i<115;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -256,7 +256,7 @@ update_process($username, $progress);
             <?php
                 for($i=115;$i<121;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -267,7 +267,7 @@ update_process($username, $progress);
             <?php
                 for($i=121;$i<127;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -279,7 +279,7 @@ update_process($username, $progress);
             <?php
                 for($i=127;$i<133;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -290,7 +290,7 @@ update_process($username, $progress);
             <?php
                 for($i=133;$i<139;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -302,7 +302,7 @@ update_process($username, $progress);
             <?php
                 for($i=139;$i<145;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -313,7 +313,7 @@ update_process($username, $progress);
             <?php
                 for($i=145;$i<151;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -326,7 +326,7 @@ update_process($username, $progress);
             <?php
                 for($i=151;$i<157;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -337,7 +337,7 @@ update_process($username, $progress);
             <?php
                 for($i=157;$i<163;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -349,7 +349,7 @@ update_process($username, $progress);
             <?php
                 for($i=163;$i<169;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -360,7 +360,7 @@ update_process($username, $progress);
             <?php
                 for($i=169;$i<175;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -372,7 +372,7 @@ update_process($username, $progress);
             <?php
                 for($i=175;$i<181;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -383,7 +383,7 @@ update_process($username, $progress);
             <?php
                 for($i=181;$i<187;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -395,7 +395,7 @@ update_process($username, $progress);
             <?php
                 for($i=187;$i<193;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -406,7 +406,7 @@ update_process($username, $progress);
             <?php
                 for($i=193;$i<199;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -419,7 +419,7 @@ update_process($username, $progress);
             <?php
                 for($i=199;$i<205;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -430,7 +430,7 @@ update_process($username, $progress);
             <?php
                 for($i=205;$i<211;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -442,7 +442,7 @@ update_process($username, $progress);
             <?php
                 for($i=211;$i<217;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -453,7 +453,7 @@ update_process($username, $progress);
             <?php
                 for($i=217;$i<223;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -465,7 +465,7 @@ update_process($username, $progress);
             <?php
                 for($i=223;$i<229;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -476,7 +476,7 @@ update_process($username, $progress);
             <?php
                 for($i=229;$i<235;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -488,7 +488,7 @@ update_process($username, $progress);
             <?php
                 for($i=235;$i<241;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -499,7 +499,7 @@ update_process($username, $progress);
             <?php
                 for($i=241;$i<247;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -512,7 +512,7 @@ update_process($username, $progress);
             <?php
                 for($i=247;$i<253;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -523,7 +523,7 @@ update_process($username, $progress);
             <?php
                 for($i=253;$i<259;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -535,7 +535,7 @@ update_process($username, $progress);
             <?php
                 for($i=259;$i<265;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -546,7 +546,7 @@ update_process($username, $progress);
             <?php
                 for($i=265;$i<271;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -558,7 +558,7 @@ update_process($username, $progress);
             <?php
                 for($i=271;$i<277;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -569,7 +569,7 @@ update_process($username, $progress);
             <?php
                 for($i=277;$i<283;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -581,7 +581,7 @@ update_process($username, $progress);
             <?php
                 for($i=283;$i<289;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    
@@ -592,7 +592,7 @@ update_process($username, $progress);
             <?php
                 for($i=289;$i<295;$i++) {
                     if(in_array($i,$stickers)){
-                        echo '<div class="m_s" style="background-image: url('.find_image($i).');"></div>';
+                        echo '<div class="m_s" style="background-image: url(./images/'.find_image($i).');"></div>';
                     } else {
                         echo '<div>'.$i.'</div>';
                     }                    

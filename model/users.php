@@ -166,4 +166,30 @@ function is_logged($username){
 }
 
 
+function is_admin($username){
+    $users = get_users();
+    foreach($users as $user){
+        if ($user['username'] == $username){
+            if(!empty($user['role'])){
+                if($user['role']=='admin'){
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+function add_admin($username){
+    global $db;
+    $query = "UPDATE users SET role='admin' WHERE users.username='$username'";
+    mysqli_query($db,$query);
+}
+
+function remove_admin($username){
+    global $db;
+    $query = "UPDATE users SET role='user' WHERE users.username='$username'";
+    mysqli_query($db,$query);
+}
+
 ?>
